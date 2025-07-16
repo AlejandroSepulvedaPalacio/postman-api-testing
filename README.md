@@ -37,5 +37,5 @@ Se puede integrar con CI/CD (GitHub Actions, Jenkins, etc.)
 
 👤 Autor
 Santiago Alejandro Sepúlveda Palacio
-QA Engineer | API Testing | Postman | Newman | Automatización
+QA Engineer
 📧 santiagosepulveda.engineer@gmail.com
