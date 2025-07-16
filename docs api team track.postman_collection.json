@@ -1,0 +1,2674 @@
+{
+	"info": {
+		"_postman_id": "4bd8a20b-9f87-4ad2-a57f-2add3a39bc48",
+		"name": "docs api team track",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41633005",
+		"_collection_link": "https://teamtrack.postman.co/workspace/teamtrack-Workspace~c4c539a0-89ae-4e79-a7e4-ab7d11a286af/collection/39752696-4bd8a20b-9f87-4ad2-a57f-2add3a39bc48?action=share&source=collection_link&creator=41633005"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "auth user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTcwNzU3M30.EKpusKMcIOYODIj-mV7DCJ7PEZRjh2gFDQqwtg2CaLM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "userName",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{END_POINT}}}/user/",
+							"host": [
+								"{{END_POINT}}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjU3MDQ0N30.Pgo-4nPi2POOfMIV-lxuHFLHIb_9l3PLOX6yCZ7e90s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"username@correo.com\",\n            \"password\": \"paassword123\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/user/3/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"user",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjU3MDQ0N30.Pgo-4nPi2POOfMIV-lxuHFLHIb_9l3PLOX6yCZ7e90s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{END_POINT}}/user/list/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"user",
+								"list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTcwNzU3M30.EKpusKMcIOYODIj-mV7DCJ7PEZRjh2gFDQqwtg2CaLM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/user/3/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"user",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View a user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTcwNzU3M30.EKpusKMcIOYODIj-mV7DCJ7PEZRjh2gFDQqwtg2CaLM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/user/3/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"user",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTcwNzU3M30.EKpusKMcIOYODIj-mV7DCJ7PEZRjh2gFDQqwtg2CaLM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n            \"name\":\"andres\",\n            \"password\": \"password123\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/user/add/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"user",
+								"add",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "Create a access",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTMxNH0.245q_ZByUXIJo8_F3Hk3aV3Tlsh9DWLhYY0vyMNPPJQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n                \"user_name\": \"userName\",\n                \"role_name\": \"Admin\"\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/access/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"access",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit access",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MDU5N30.bE-Qr-fcSaSlWNSpcy1UK3CCE_UByJH_LkThAqaNOzk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\": \"userName\",\n    \"role_name\": \"Admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/access/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"access",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "access list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MDU5N30.bE-Qr-fcSaSlWNSpcy1UK3CCE_UByJH_LkThAqaNOzk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/access/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"access",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view access",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MDU5N30.bE-Qr-fcSaSlWNSpcy1UK3CCE_UByJH_LkThAqaNOzk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/access/1/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"access",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete accesss",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MDU5N30.bE-Qr-fcSaSlWNSpcy1UK3CCE_UByJH_LkThAqaNOzk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_name\": \"userName\",\n    \"role_name\": \"Admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/access/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"access",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teams",
+			"item": [
+				{
+					"name": "create team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n                \"name\":\"Dev\"\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/team/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"team",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n                \"name\":\"Development\"\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/team/3/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"team",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "team list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/team/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"team",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/team/3/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"team",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/team/10/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"team",
+								"10",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employee_profile",
+			"item": [
+				{
+					"name": "employees profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczNzczNTAyMn0.ixjnCSW7FoEL9Plcz0YgzljMn0XPkd-L_0-hu2gUIwc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n                \"name\": \"profile_name\",\n                \"profile_type\": \"Administrative\",\n                \"seniority\":\"Expert\"\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/employee_profile/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee profile list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczNzczNTAyMn0.ixjnCSW7FoEL9Plcz0YgzljMn0XPkd-L_0-hu2gUIwc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/employee_profile/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit employee profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczNzczNTAyMn0.ixjnCSW7FoEL9Plcz0YgzljMn0XPkd-L_0-hu2gUIwc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"employee_profile_name qwe\",\n    \"is_active\": true,\n    \"profile_type\": \"Administrative\",\n    \"updated_at\": \"2025-01-23T16:51:23\",\n    \"id\": 4,\n    \"seniority\": \"Crack\",\n    \"created_at\": \"2025-01-23T16:20:45\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/employee_profile/4/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_profile",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view employee profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/employee_profile/5/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_profile",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete employee profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/employee_profile/5/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_profile",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employees",
+			"item": [
+				{
+					"name": "Create an employees",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n            \"document\": \"111156111\",\n            \"name\": \"Test\",\n            \"user_id\": 4,\n            \"employee_profile_id\":2,\n            \"is_active\": \"True\",\n            \"is_assignable\": \"True\",\n            \"date_of_joining\": \"2023-10-10\",\n            \"team_ids\": [2]\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/employee/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit employ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"document\": \"123456111\",\n            \"name\": \"Test andres\",\n            \"user_id\": 2,\n            \"employee_profile_id\":2,\n            \"is_active\": \"True\",\n            \"is_assignable\": \"True\",\n            \"date_of_joining\": \"2023-10-10\",\n            \"team_ids\": [2]\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/employee/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all employes list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMzg0NDgyNH0.6Eg6EsUU1qUSStxx_jvXdELmUKomiEjQA_OH_Y9SaFY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"limit\":\"49\",\n    \"offset\":0,\n    \"name\": \"luz d Cardona\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/employee/employeepagination/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee",
+								"employeepagination",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view employ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0NzUwOTcyNn0.Aqd6YU67r09lEDHU8dIs81GNki8mT9CrHlcycCoqaKs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/employee/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activate employees list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/employee/actives/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee",
+								"actives",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activate employ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/employee/activate/3/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee",
+								"activate",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete employ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date_of_leaving\":\"2999-01-01 00:00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/employee/3/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "clients",
+			"item": [
+				{
+					"name": "create client",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"name\": \"client_name\",\n            \"client_type\": \"Internal\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/client/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"client",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit client",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"name\": \"luz\",\n            \"client_type\": \"Internal\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/client/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"client",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/client/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"client",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view client",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/client/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"client",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete client",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/client/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"client",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project status",
+			"item": [
+				{
+					"name": "edit proyect status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"name\": \"status name andres\",\n            \"description\": \"project status description\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/project_status/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"project_status",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "proyect status list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/project_status/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"project_status",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view proyect status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/project_status/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"project_status",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete proyect status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/project_status/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"project_status",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project Statuses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"name\": \"project status name\",\n            \"description\": \"project status description\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/project_status/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"project_status",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "projects",
+			"item": [
+				{
+					"name": "edit project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"name\":\"Project1 andres\",\n            \"client_id\": 1,\n            \"status_id\": 1,\n            \"started_at\": \"2023-10-10\",\n            \"ended_at\": \"2024-12-10\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/project/4/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"project",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"name\":\"Project1\",\n            \"client_id\": 1,\n            \"status_id\": 1,\n            \"started_at\": \"2023-10-10\",\n            \"ended_at\": \"2024-12-10\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/project/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "project list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/project/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/project/4/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"project",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTc2MTQxNn0.0qwNj1raXurFo_C89gQzVDOUwF3eMpKUifmon4FOSpU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/project/4/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"project",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assessments",
+			"item": [
+				{
+					"name": "assesment create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczNzY2NDAzMn0.MRXYNmgK2vn0yAz9oiS0KXBf6fIMLlJzzVZFDtza1Nc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"team_id\": 1,\n  \"semester\": 2,\n  \"year\": 2023,\n  \"status\": \"draft\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assessments/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assessments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assessments  view",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjYXJ3dyIsImV4cCI6MTczOTA0MDA4Nn0.NRhuz5tA447J-ywh_apQhczt95QN6AB6R193dfw605E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assessments/get/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assessments",
+								"get",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "thematic",
+			"item": [
+				{
+					"name": "http://localhost:3000/thematic/type/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczODk1OTU1MX0.bZvAWzvsOU_0qmaFD3TPj6XYb0J26bJrgo6rZqn-_FQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\t\t\"type\": \"technical   fdfgdf\",\n\t\t\t\t\"description\": \"technical description\"\n\t\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/thematic/type/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"thematic",
+								"type",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assignments",
+			"item": [
+				{
+					"name": "assignment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/assignment/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assignment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assignment update masive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"project_id\": 0,\n    \"employee_id\": 0,\n    \"assignment_type\": \"string\",\n    \"start_date\": \"2025-03-21\",\n    \"end_date\": \"2025-03-21\",\n    \"allocation_percentage\": 0,\n    \"monthly_hours_expected\": 0,\n    \"monthly_hours_actual\": 0,\n    \"is_active\": true,\n    \"id\": 0,\n    \"project_start_date\": \"2025-03-21\",\n    \"project_end_date\": \"2025-03-21\"\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assignment/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assignment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assignment create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"project_id\": 0,\n  \"employee_id\": 0,\n  \"assignment_type\": \"string\",\n  \"start_date\": \"2025-03-21\",\n  \"end_date\": \"2025-03-21\",\n  \"allocation_percentage\": 0,\n  \"monthly_hours_expected\": 0,\n  \"monthly_hours_actual\": 0,\n  \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assignment/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assignment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assignment by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/assignment/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assignment",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assignment update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"project_id\": 0,\n  \"employee_id\": 0,\n  \"assignment_type\": \"string\",\n  \"start_date\": \"2025-03-21\",\n  \"end_date\": \"2025-03-21\",\n  \"allocation_percentage\": 0,\n  \"monthly_hours_expected\": 0,\n  \"monthly_hours_actual\": 0,\n  \"is_active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assignment/3/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assignment",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assignment delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/assignment/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assignment",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assignment pagination view",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"limit\": 0,\n  \"offset\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assignment/pagination/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assignment",
+								"pagination",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assignment employee hours for month",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/assignment/hours/2/2025/03/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assignment",
+								"hours",
+								"2",
+								"2025",
+								"03",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employee timeoff",
+			"item": [
+				{
+					"name": "employee event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/employee_timeoff/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_timeoff",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee timeoff create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"employee_id\": 0,\n  \"absence_type_id\": 0,\n  \"comments\": \"string\",\n  \"start_date\": \"2025-03-21\",\n  \"end_date\": \"2025-03-21\",\n  \"new_profile_type\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/employee_timeoff/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_timeoff",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee event create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"employee_id\": 0,\n  \"start_date\": \"2025-03-21\",\n  \"end_date\": \"2025-03-21\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/employee_timeoff/event/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_timeoff",
+								"event",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee event by employee_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/employee_timeoff/employees/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_timeoff",
+								"employees",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee event by team",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/employee_timeoff/teams/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_timeoff",
+								"teams",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "timeoff type",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/employee_timeoff/type_timeoff/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_timeoff",
+								"type_timeoff",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update employee timeoff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"employee_id\": 0,\n  \"absence_type_id\": 0,\n  \"comments\": \"string\",\n  \"start_date\": \"2025-03-21\",\n  \"end_date\": \"2025-03-21\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/employee_timeoff/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_timeoff",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete timeoff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0MjA1OTQ5MH0.n3khfyjAv80pSeXXUXnbitr2nmpHdIhobI0MuOk7S3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/employee_timeoff/2/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"employee_timeoff",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assignments report",
+			"item": [
+				{
+					"name": "generate report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJDYWxpZGFkIiwiZXhwIjoxNzQ0MzIxMDIwfQ.Ozp4fjz5YoqHqTscjwKKYZPuCX97RMxhV9WuhOkAhjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assignmentreport/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assignmentreport",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatehoursmanual",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0NzQxMzc5Nn0.ym_JZiZfbq6-wJb0VL-EMP1POs6pVg53qRJAul9V2Og",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"year\":2025,\n    \"month\":12\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.teamtrack.acc.op.quind.io/employee/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"teamtrack",
+								"acc",
+								"op",
+								"quind",
+								"io"
+							],
+							"path": [
+								"employee",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assessments Thematic",
+			"item": [
+				{
+					"name": "get assessmtent thematic",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0NzkzNzY5Nn0.W2MUapaKWef1yMh3iKpD2W1d4RUPV9fHXYX6teLrH-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/thematic/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"thematic",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update assessments thematics",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0NzQ5NjI3OH0.9Vc6epqpP6aFeRKf7u5JBOqZksG_8Z3EVC32Sk5oh2M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Andres\",\n    \"description\": \"Test\",\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/thematic/1/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"thematic",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create assessments thematics",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0NzkzNzY5Nn0.W2MUapaKWef1yMh3iKpD2W1d4RUPV9fHXYX6teLrH-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Python\",\n    \"description\": \"Test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/thematic/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"thematic",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete thematic",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0NzkzNzY5Nn0.W2MUapaKWef1yMh3iKpD2W1d4RUPV9fHXYX6teLrH-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"ANDRES felipe\",\n    \"description\": \"Test\"\n}"
+						},
+						"url": {
+							"raw": "{{END_POINT}}/thematic/9/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"thematic",
+								"9",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assessment_items",
+			"item": [
+				{
+					"name": "get items",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0NzkzNzY5Nn0.W2MUapaKWef1yMh3iKpD2W1d4RUPV9fHXYX6teLrH-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"ANDRES felipe muñoz\",\n    \"description\": \"Test\"\n}"
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assessment_item/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assessment_item",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0NzkzNzY5Nn0.W2MUapaKWef1yMh3iKpD2W1d4RUPV9fHXYX6teLrH-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Evaluación Práctica\",\n    \"description\": \"Test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assessment_item/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assessment_item",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0Nzc1NDcyOX0.M-Uz3HhrYDRL2MNymutMblhn5El-IQxg_ak_Hh5gJEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":3,\n    \"name\": \"ANDRES felipe muñoz\",\n    \"description\": \"Test prur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assessment_item/3/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assessment_item",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0NzkzNzY5Nn0.W2MUapaKWef1yMh3iKpD2W1d4RUPV9fHXYX6teLrH-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":3,\n    \"name\": \"ANDRES felipe muñoz\",\n    \"description\": \"Test prur\"\n}"
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assessment_item/5/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assessment_item",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assessments",
+			"item": [
+				{
+					"name": "get assessments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0ODQ0NzkzMX0.UVvlUMIdA7A2S88mMQBMHI5vDTvctmy1wRCpD2mbfhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{END_POINT}}/assessments/get/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assessments",
+								"get",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update status assessment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0ODQ0NzkzMX0.UVvlUMIdA7A2S88mMQBMHI5vDTvctmy1wRCpD2mbfhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":7,\n    \"status\":\"ready\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assessments/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assessments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{END_POINT}}/assessments/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0ODQ0NzkzMX0.UVvlUMIdA7A2S88mMQBMHI5vDTvctmy1wRCpD2mbfhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"team_id\":1,\n    \"semester\":2,\n    \"year\":2024\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{END_POINT}}/assessments/",
+							"host": [
+								"{{END_POINT}}"
+							],
+							"path": [
+								"assessments",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assessment by profile",
+			"item": [
+				{
+					"name": "create assessment by profile",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

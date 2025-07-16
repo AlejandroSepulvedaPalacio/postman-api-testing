@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "38e2b4fc-f750-4925-947e-6ce57b3a00f8",
+		"name": "Test API santiago",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41633005",
+		"_collection_link": "https://teamtrack.postman.co/workspace/teamtrack-Workspace~c4c539a0-89ae-4e79-a7e4-ab7d11a286af/collection/41633005-38e2b4fc-f750-4925-947e-6ce57b3a00f8?action=share&source=collection_link&creator=41633005"
+	},
+	"item": [
+		{
+			"name": "consultar reportes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ACCESS_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{END_POINT}}/assignmentreport/",
+					"host": [
+						"{{END_POINT}}"
+					],
+					"path": [
+						"assignmentreport",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth user to generate report",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let response = pm.response.json();",
+							"pm.environment.set(\"ACCESS_TOKEN\", response.access_token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTczMTcwNzU3M30.EKpusKMcIOYODIj-mV7DCJ7PEZRjh2gFDQqwtg2CaLM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Calidad",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Test123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{END_POINT}}/user/",
+					"host": [
+						"{{END_POINT}}"
+					],
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate report user with all permissions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyTmFtZSIsImV4cCI6MTc0NDEyNDc3M30.Xp70s2UQSiAkOIRWdfOEkJMyZdi2ePC0tIrOOi2vsos",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"team_id\":2,\n    \"month\":2,\n    \"year\":2025\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{END_POINT}}/assignmentreport/",
+					"host": [
+						"{{END_POINT}}"
+					],
+					"path": [
+						"assignmentreport",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
